@@ -1,0 +1,16 @@
+safas
+
+asf
+
+ts:1200.1200 Scene started
+ts:1200.1234 : trace1
+ts:1200.1450 : trace2
+garbage.
+ts:1200.900 Scene started
+garbasdfas
+ts:1201.100 : trace1
+sfsfads
+ts:1201.140 :trace2
+sfsadfs
+end
+

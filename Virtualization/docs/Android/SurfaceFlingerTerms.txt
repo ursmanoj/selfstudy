@@ -1,0 +1,90 @@
+Ref : http://rahulonblog.blogspot.kr/2013/06/an-overview-of-surfaceflinger.html
+
+An Overview of Surfaceflinger 
+Basic Terminology:
+
+
+Surface: A Surface in Android corresponds to an off screen buffer into which application renders its content. From application point of view, each application may correspond to one or more graphical interfaces. Each interface can be regarded as surface. Each surface has its position, size, content and other elements.
+
+
+Surfaceflinger : It is a system-wide surface composer function which resides in android framework. It takes data( which is surface) from different application which could be 2D or 3D and finally combine it to obtain a main surface which will be fed to memory( which is framebuffer).
+Surfaceflinger synthesize all the surface according to their position, size and other parameters, although this synthesis is done by OpenGL(which is invoked by Surfaceflinger), but we need Surfaceflinger to calculate the relevant parameters like overlapping function.
+
+
+HardwareComposer : This is part of HAL, it is used by surfaceflinger to composite surfaces to the screen. The hardware composer abstracts things like overlays and 2D blitters and helps offload some things that would normally be done by OpenGL. This is done by using 3D GPU or a 2D graphics engine.
+
+
+Gralloc : this is also part of HAL. Gralloc stands for Graphics memory allocator. It has two parts
+                1. First provide pmem interface, which is responsible for contiguous memory allocation.
+                2. Other is responsible for framebuffer refresh where UI actually put framebuffer data.        
+       
+Display: it is the physical display device. Current version of surfaceflinger supports only one display device which corresponds to display hardware.
+
+
+Surfaceflinger, it does 3 main tasks:
+                1. It creates a new displayHardware, which is used to establish a FramebufferNativeWindow to determine the data output device interface
+                2. Initialize OpenGL, as this is the one which synthesize.
+                3. Create main surface, on which all surfaces will be merged.      
+
+
+How Surfaceflinger starts:
+
+
+Step 1. SystemServer.main [Defined in SystemServer.java]
+         It loads library named android_servers, and then call init1(args) function.
+
+
+Step 2. SystemServer.init1 [Defined in com_android_server_SystemServer.cpp]
+         It further calls system_init() funcion. Now in system_init.cpp it calls like property_get("system_init.startsurfaceflinger", propBuf, "1");  and finally  SurfaceFlinger::instantiate() After this, function checks whether system supports Binder inter-process communication mechanism. It it supports, it will call startThreadPool Binder to start a thread pool, and call the current thread IPCThreadState to be added in front of the Binder thread pool.
+
+
+Step 3. BinderService.instantiate [Defined in BinderService.h]
+        This function is inherited in Surfaceflinger by parent class BinderService. 
+
+
+Step 4. BinderService.publish [Defined in BinderService.h]
+        BinderService publish static member function of class action is performed to create a SurfaceFlinger instance which will be used as a system SurfaceFlinger service. And this service will be registered with ServiceManager, so that in future after it starts anyone can use it in the system.  
+  
+Step 5. New SurfaceFlinger [Defined in SurfaceFlinger.cpp]
+        This cunstructor will call init to perform initialization operations.
+                 
+Step 6. SurfaceFlinger.init [Defined in SurfaceFlinger.cpp]
+        Here we do some debugging stuff, and as surfaceflinger is Binder proxy object, we passs a pointer of type IBinder strong reference as a parameter. And this will call onFirstRef() function. 
+               
+Step 7. SurfaceFlinger.onFirstRef [Defined in SurfaceFlinger.cpp]
+        First it calls a thread name Surfaceflinger and then it is used to perform UI rendering operations. There is a member class variable in Surfaceflinger, it is used to described as a barrier.It is a thread synchronization tool that blocks the current thread untill the surfaceflinger service UI rendering thread completes initialization operation. It will ultimately will call readyToRun.     
+                 
+Step 8. SurfaceFlinger.readyToRun [Defined in SurfaceFlinger.cpp]
+         This code first creates a Display Hardware object, used to describe the device display. And then use this object to initialize Surfaceflinger class member variable mGraphicPlanes which is described as GraphicsPlane. 
+This function further allocate 4KB shared memory, it is used to hold the device display attribute information such as width, height, density and no of frames per second. Other process can access this block using getcblk.
+Now it initialize dpy(display)'s element like width, length, pixel format and finally make it as primary display. Next we initialize OpenGL Library, as it will be OpenGL which will be rendering.Further, LayerDim:initDimmer() function is called. LayerDim is udes to describe surface with a color gradient function. Then it allows system UI rendering as initialization is complete. Finally we will call boot animation.      
+                      
+How Framebuffer is opened from SurfaceFlinger:
+                      If you remember I mentioned earlier that we create FramebufferNativeWindow. Here it calls framebuffer_open and gralloc_open. First lets take about framebuffer_open. Call goes like : framebuffer_open() -> fb_device_open() -> gralloc_open() -> gralloc_device_open()         
+                                                               -> mapFramebuffer() -> mapFramebufferLocked() -> It opens the device as /dev/graphics/fbX or /dev/fbX. Further we pass all other info using IOCTL FBIOPUT_VSCREENINFO depending on Pixel format which we get using property_get() function.
+             At the same time we call grDev->alloc which calls gralloc_alloc  which ultimately calls gralloc_alloc_buffer, it allocates ashmem memory for graphics buffer.              
+   
+How framebuffer is updated:
+As we saw Surfaceflinger initialization part, once it is done, surfaceflinger service waits for any event to occur. Event could be anything like new application launched, orientation changed or any other app came in foreground. So after initialization Surfaceflinger is stuck at waitForEvent(). When event occurs, onMessageRecieved() is called. It calls 
+        -> handleTransaction(), it takes care of shifting layers and adjusting layers according to the size or orientation of window.
+         -> handlePageFlip(), it will traverse through each layer and calculate the dirty region(which needs to update). During this time lock is held on frontBuffer.
+         -> handleRepaint(), it composes surfacesAs Overlay is present so composer assume framebuffer as transparent and finally draw layer by layer using OpenGL calls.
+         -> postFrameBuffers(), This is final call to swap the buffer. call flow goes like this                                              -> flip()[DisplayHardware]->eglSwapBuffers[OpenGL] -> queueBuffer(libui) -> fb_post(gralloc).
+
+
+How GraphicsBuffer is associated with user application:
+
+
+In gralloc.h there is a member structure as gralloc_module_t which defines all the method associated with this HAL module. Here we have register_buffer()/unregister_buffer() [Defined in mapper.cpp].                                These methods link the graphics buffer allocated by gralloc_alloc_buffer() to the application address space using native_handle_t(this is one more data structure).
+
+
+MISC about HAL:
+   - For display system, gralloc is provided as a HAL module. Its job is to encapsulates all access to the framebuffer operations.
+   - With gralloc device, the user space application can allocate a graphics buffer.
+   - Each HAL module has an ID value which will be used to open the module using hw_get_module(). Here it is GRALLOC_HARDWARE_MODULE_ID "gralloc"
+   - hw_get_module will load following so file : gralloc..so, gralloc..so, gralloc..so, gralloc..so.[Here in paranthesis these are properties ]
+   - you can check private_module_t for a lot of details.
+
+
+References: 
+http://blog.csdn.net/Luoshengyang/article/category/838604 

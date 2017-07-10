@@ -1,0 +1,31 @@
+Ref : http://source.android.com/devices/graphics/architecture.html
+
+Graphics architecture
+
+
+In this document
+Low-level components
+High-level components
+
+What every developer should know about Surface, SurfaceHolder, EGLSurface, SurfaceView, GLSurfaceView, SurfaceTexture, TextureView, SurfaceFlinger, and Vulkan.
+
+This page describes essential elements of the Android system-level graphics architecture and how they are used by the application framework and multimedia system. The focus is on how buffers of graphical data move through the system. If you've ever wondered why SurfaceView and TextureView behave the way they do, or how Surface and EGLSurface interact, you are in the correct place.
+
+Some familiarity with Android devices and application development is assumed. You don't need detailed knowledge of the app framework and very few API calls are mentioned, but the material doesn't overlap with other public documentation. The goal is to provide details on the significant events involved in rendering a frame for output to help you make informed choices when designing an application. To achieve this, we work from the bottom up, describing how the UI classes work rather than how they can be used.
+
+This section includes several pages covering everything from background material to HAL details to use cases. It starts with an explanation of Android graphics buffers, describes the composition and display mechanism, then proceeds to the higher-level mechanisms that supply the compositor with data. We recommend reading pages in the order listed below rather than skipping to a topic that sounds interesting.
+
+Low-level components
+
+•BufferQueue and gralloc. BufferQueue connects something that generates buffers of graphical data (the producer) to something that accepts the data for display or further processing (the consumer). Buffer allocations are performed through the gralloc memory allocator implemented through a vendor-specific HAL interface.
+•SurfaceFlinger, Hardware Composer, and virtual displays. SurfaceFlinger accepts buffers of data from multiple sources, composites them, and sends them to the display. The Hardware Composer HAL (HWC) determines the most efficient way to composite buffers with the available hardware, and virtual displays make composited output available within the system (recording the screen or sending the screen over a network).
+•Surface, Canvas, and SurfaceHolder. A Surface produces a buffer queue that is often consumed by SurfaceFlinger. When rendering onto a Surface, the result ends up in a buffer that gets shipped to the consumer. Canvas APIs provide a software implementation (with hardware-acceleration support) for drawing directly on a Surface (low-level alternative to OpenGL ES). Anything having to do with a View involves a SurfaceHolder, whose APIs enable getting and setting Surface parameters such as size and format.
+•EGLSurface and OpenGL ES. OpenGL ES (GLES) defines a graphics-rendering API designed to be combined with EGL, a library that knows how to create and access windows through the operating system (to draw textured polygons, use GLES calls; to put rendering on the screen, use EGL calls). This page also covers ANativeWindow, the C/C++ equivalent of the Java Surface class used to create an EGL window surface from native code.
+•Vulkan. Vulkan is a low-overhead, cross-platform API for high-performance 3D graphics. Like OpenGL ES, Vulkan provides tools for creating high-quality, real-time graphics in applications. Vulkan advantages include reductions in CPU overhead and support for the SPIR-V Binary Intermediate language.
+
+High-level components
+
+•SurfaceView and GLSurfaceView. SurfaceView combines a Surface and a View. SurfaceView's View components are composited by SurfaceFlinger (and not the app), enabling rendering from a separate thread/process and isolation from app UI rendering. GLSurfaceView provides helper classes to manage EGL contexts, inter-thread communication, and interaction with the Activity lifecycle (but is not required to use GLES).
+•SurfaceTexture. SurfaceTexture combines a Surface and GLES texture to create a BufferQueue for which your app is the consumer. When a producer queues a new buffer, it notifies your app, which in turn releases the previously-held buffer, acquires the new buffer from the queue, and makes EGL calls to make the buffer available to GLES as an external texture. Android 7.0 adds support for secure texture video playback enabling GPU post-processing of protected video content.
+•TextureView. TextureView combines a View with a SurfaceTexture. TextureView wraps a SurfaceTexture and takes responsibility for responding to callbacks and acquiring new buffers. When drawing, TextureView uses the contents of the most recently received buffer as its data source, rendering wherever and however the View state indicates it should. View composition is always performed with GLES, meaning updates to contents may cause other View elements to redraw as well.
+

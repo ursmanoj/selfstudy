@@ -1,0 +1,20 @@
+Requirement :
+1. build linux kernel with debug symbols ( 'Kernel debugging' and 'Compile the kernel with debug info' options )
+
+Debuggin on qemu :
+1. start debugging by appending -s and -S to qemu command, e.g. 
+   qemu -kernel output/images/bzImage -hda output/images/rootfs.ext2 -append "root=/dev/sda rw" -s -S
+  
+  '-s' option launches 'gdb server'.
+  '-S' stops the kernel at the outset.
+
+2. launch gdb 
+  $ gdb 
+  (gdb) file vmlinux
+  (gdb) target remote :1234
+
+
+Above steps should perhaps even work for user-level programs running on linux of qemu. (Please update this doc if so).
+Otherwise, please check https://balau82.wordpress.com/2010/08/17/debugging-arm-programs-inside-qemu/ 
+on how to debug application running on linux kernel on qemu.
+

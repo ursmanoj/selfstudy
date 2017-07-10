@@ -1,0 +1,32 @@
+$ dd if=/dev/zero of=./android.img bs=1MiB count=8192
+// $ qemu-img create -f raw opensuse-factory.img 1G
+// $ sudo losetup /dev/loop0 opensuse-factory.img
+// $ sudo mkfs.ext4 /dev/loop0
+// $ sudo losetup /dev/loop3 ./androidtv_vexpress.img
+
+// see this : http://unix.stackexchange.com/questions/12986/how-to-copy-the-partition-layout-of-a-whole-disk-using-standard-tools
+$ sudo fdisk -l vexpress.img
+
+Disk vexpress.img: 2147 MB, 2147483648 bytes
+255 heads, 63 sectors/track, 261 cylinders, total 4194304 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+       Device Boot      Start         End      Blocks   Id  System
+vexpress.img1   *          63      270334      135136    e  W95 FAT16 (LBA)
+vexpress.img2          270336     1843199      786432   83  Linux
+vexpress.img3         1843200     2367487      262144   83  Linux
+vexpress.img4         2367488     4194303      913408    5  Extended
+vexpress.img5         2367520     3547135      589808   83  Linux
+vexpress.img6         3547168     4194303      323568   83  Linux
+
+sande@sande:/poc$ sfdisk -d vexpress.img  > vexpress_part_table
+Warning: extended partition does not start at a cylinder boundary.
+DOS and Linux will interpret the contents differently.
+
+# edit vexpress_part_table to resize the partitions
+
+sande@sande:/poc$ sfdisk androidtv_vexpress.img < vexpress_part_table
+

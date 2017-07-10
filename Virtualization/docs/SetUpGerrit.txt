@@ -1,0 +1,21 @@
+DO :
+One time setup steps
+1. Go to http://10.89.38.148:8088/, and register your account; 
+  and in Settings->SSH Public Key , copy the content of ~/.ssh/id_rsa.pub .
+
+2. git clone ssh://<user>@10.89.38.148:29418/android_poc
+	- Skip above step if already cloning has been done.
+
+3. scp -p -P 29418 <your account name>@10.89.38.148:hooks/commit-msg .git/hooks/
+
+4. git remote add gerrit ssh://10.89.38.148:29418/android_poc
+
+Pushing your changes for review
+5. git push gerrit HEAD:refs/for/master
+
+	- Will automaticaly get merged once it receives review approval.
+
+
+Issue seen by me :
+  on Windows : Unable to negotiate with 10.89.38.148: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1
+  Solution :  vi ~/.ssh/config ( in git bash shell) and then add content as described http://stackoverflow.com/questions/33910364/issue-with-cloning-git-repository link

@@ -1,0 +1,296 @@
+>> Wednesday, February 15, 2017
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:13 
+Hemantaa
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:22                 
+hi
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:32 
+jaldi hi kabhi milo, data science related kutch queries hain
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:32                 
+achha
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:32                 
+thik hai
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:32                 
+aaj evening mei
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:32                 
+ya weekend chalega?
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:32 
+lauto to batana, main kaafi late office aaya so abhi confirm nai kah sakta
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:33 
+jab b possible for both tab mil lenge
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:33                 
+ok, thik hai
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:33                 
+msg karunga
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:33 
+actually overview chahiye is technology ka
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:33 
+for a starter
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:33                 
+ok
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:33 
+kutch links etc hon ya PPT etc woh bhi bhej do
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:33 
+not hi-fi, basic level par
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:34                 
+k
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:34 
+any recommendation to start study with
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:34                 
+thik hai kuchh pointers bhejta hun highlevel ka
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:34 
+ok
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:34                 
+data science - 1. statistical learning/machine learning etc/
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:35                 
+2. big data - mainly technology - like hadoop, spark, nosql etc
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:35                 
+3. deep learning, etc
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:35                 
+kaun sa? specific hai koi ?
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:36                 
+3, deep learning, computer vision and Natural Language Processing (NLP)
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:36                 
+let me know specific if any
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:37 
+big data analysis related hai
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:37 
+recommender system
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:37                 
+ok
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:38                 
+http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:38                 
+https://www.ibm.com/developerworks/library/os-recommender1/
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:38                 
+http://vikas.sindhwani.org/recommender.pdf
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:38 
+u know about recommender?
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:39                 
+Prem Melville abd Vikas Sidhwani, I know them personally
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:39                 
+yes
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:39                 
+I have a patent in related area
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:39 
+ok so yeh kis category mein aata hai?
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:39                 
+read the last one
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:39                 
+part of machine learningh
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:39 
+in above 3 u mentinoed
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:39 
+ok
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:39                 
+and usages of numerical linear algebra
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:40                 
+ek baar print lar lo lastwala pdf and read and rest milne par
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:40                 
+also refer, wikipedia
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:40                 
+and movie recommendation ka kaggle competion dekhlo
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:40                 
+just read Collaborative Filtering algo - two types, from Wiki
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:41 
+ok,
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:42                 
+if time permits finish this you will be expert at the end of it - https://www.coursera.org/specializations/recommender-systems
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:43                 
+also basic of data science high level intro - https://www.edx.org/course/data-science-orientation-microsoft-dat101x-1
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:44 
+free hai yeh
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:44 
+?
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:44                 
+the complete courses - from Microsoft, but introductory level
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:44                 
+haan free for learning and for certificates paid
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:44                 
+https://www.edx.org/microsoft-professional-program-certficate-data-science
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:44 
+ok
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:47                 
+certificate is just for showcasing and being new area not everyone specially HR knows who's resume to select - if changing field and entering data science, these certificats, may cost 500-600 dollar and 6-12 month to complete comfortably , will make you stand out among others for easy filterinh
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:47                 
+filtering
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:48 
+got it
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:48 
+actually mujhe interest bilkul bhi nai hai :(
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:48 
+but project naya demand kar raha hai isi par kaam karna
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:48                 
+hahaha...
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:48 
+so have no option for the time being
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:48                 
+ok superficial and understanding ke liye - kno whow aise hin dekh sakte ho.
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:49 
+so this will be side by side, and mainly i ll look for another job in embedded systems again
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:49                 
+sikh jaoge over a period of time- thats better learninhg by doing
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:49 
+yup, isiliye brief level par pooch raha tha best kaun sa hai
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:49 
+jyada time bhi na lage and theek understanding ho jae
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:50                 
+so no worries, you will get interest., IoT area hai data science ka extension, that will be appealing to you
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:50                 
+ok
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:50                 
+mil kar baat kar lenge
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:50 
+ok
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:51                 
+but recommender systems to eCommerce and B2B area mei use hota hai
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:51                 
+kaun sa project kar rahe ho aisa?
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:51                 
+ya content reccommendations
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:51                 
+like which program to watch, or which clothes
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:52                 
+its simply amazon used first - people who bought this also bought this
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:52                 
+or you may like this book/movie, you may like that movie/book etc
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:55 
+similar hai
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:55 
+in hotels tv par local stuff ki advertisements
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:55                 
+I see
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:56                 
+collaborative filtering based approach
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:56 
+aisa hi kutch
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:56                 
+wo padh lo, and i will suggest some github projects where you can find some implementations
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:57 
+base start ke liye kya padhoon with min time woh batao pahle
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:57 
+baaki to samundar hai hi
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:57                 
+even if you use hadoop and mahout (java library for machine learning algo) -
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:57 
+jo ek din ya max 2 din mein ho jae
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:57                 
+wikipedia padho pahle
+
+[마노즈/MANOJ KUMAR SHARMA/Senior Engineer/Advanced S/W R&D Lab./Samsung Electronics] - 11:57 
+ok
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:57                 
+http://vikas.sindhwani.org/recommender.pdf
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:58                 
+this one is good basic + a little depth as well
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:58                 
+http://recommender-systems.org/collaborative-filtering/
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:58                 
+https://en.wikipedia.org/wiki/Collaborative_filtering
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 11:59                 
+last three padho
+
+[마노즈] - 12:18 
+Recommender hi seedhe padhoon ya pahle general kutch
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 12:21                 
+sidha wahi
+
+[쿠마허만/Hemant Kumar/Senior Engineer/Intelligent System Lab./Samsung Electronics] - 12:21                 
+its simple arithmetic
+
+[마노즈] - 12:21 
+Okay
+
