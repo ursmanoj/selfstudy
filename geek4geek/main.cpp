@@ -2,14 +2,14 @@
 #include <conio.h>
 using namespace std;
 
-#define TEST_FUNC_NAME main_bst
+#define TEST_FUNC_NAME main_segtree_min
 
 #define DECLARE_TESTMAIN extern void TEST_FUNC_NAME()
 
 void main() {
 	DECLARE_TESTMAIN;
 
-	main_bst();
+	TEST_FUNC_NAME();
 	printf("\n\n\n\nExecution complete, press any key to exit.....");
 	getch();
 }
