@@ -2,7 +2,7 @@
 #include <conio.h>
 using namespace std;
 
-#define TEST_FUNC_NAME main_segtree_min
+#define TEST_FUNC_NAME main_segtree_sum
 
 #define DECLARE_TESTMAIN extern void TEST_FUNC_NAME()
 
