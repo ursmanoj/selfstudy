@@ -30,5 +30,11 @@
     <ClCompile Include="..\Hackerrank\trie_contacts.cpp">
       <Filter>Hackerrank</Filter>
     </ClCompile>
+    <ClCompile Include="..\Graph_matrix_traverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

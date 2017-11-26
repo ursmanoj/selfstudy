@@ -41,16 +41,17 @@ static void insert(char *word) {
 	t->isWord = true;
 }
 char word[20];
-void printtrie(node * r, char *w) {
-	*w = 0;
+static void printtrie(node * r, char *w) {
+
 	for (int i = 0; i < 26; i++) {
 		if (r->branches[i]) {
 			*w = 'a' + i;
-			printtrie(r->branches[i], w+1);
+			printtrie(r->branches[i], w + 1);
 		}
 	}
+	*w = 0;
 	if (r->isWord)
-		cout << word<<endl;
+		cout << word << endl;
 }
 
 void deleteTrie(node *r) {
@@ -66,16 +67,57 @@ void deleteTrie(node *r) {
 	}
 }
 
+static bool deleteEdge(node * dst, char * s) {
+	int i = *s - 'a';
+
+	if (!*s) {
+		dst->isWord = false;
+		//check if any edge still remaining
+		for (int j = 0; j < 26; j++)
+			if (dst->branches[i])
+				return false;
+		return true;
+	}
+
+	if (dst->branches[i])
+		if (deleteEdge(dst->branches[i], s + 1)) {
+			delete dst->branches[i];
+			dst->branches[i] = 0;
+		}
+	//check if any edge still remaining
+	for (int j = 0; j < 26; j++)
+		if (dst->branches[i])
+			return false;
+
+	return true;
+}
+
+static void deleteWord(char * word) {
+	int i = *word - 'a';
+
+	if (root->branches[i])
+		if (deleteEdge(root->branches[i], word + 1)) {
+			delete root->branches[i];
+			root->branches[i] = 0;
+		}
+}
+
 void main_trie() {
 	root = new node;
 
 	insert("manoj");
 	insert("manmohan");
+	insert("man");
 	insert("devendra");
 	insert("amit");
 
 	
 	printtrie(root, word);
-	deleteTrie(root);
+
+	char delWord[] = "amit";
+	cout << endl << "deleting " << delWord << endl;
+	deleteWord(delWord);
 	printtrie(root, word);
+	//deleteTrie(root);
+	//printtrie(root, word);
 }

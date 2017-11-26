@@ -2,7 +2,7 @@
 #include <conio.h>
 using namespace std;
 
-#define TEST_FUNC_NAME main_trie
+#define TEST_FUNC_NAME main_graph_matrix
 
 #define DECLARE_TESTMAIN extern void TEST_FUNC_NAME()
 

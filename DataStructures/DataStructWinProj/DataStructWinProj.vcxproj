@@ -111,8 +111,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Graph_matrix_traverse.cpp" />
     <ClCompile Include="..\Hackerrank\trie_contacts.cpp" />
     <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\Queue.cpp" />
     <ClCompile Include="..\trie.cpp" />
     <ClCompile Include="LinkListSingle.cpp" />
   </ItemGroup>
