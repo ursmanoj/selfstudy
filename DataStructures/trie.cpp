@@ -115,9 +115,9 @@ void main_trie() {
 	printtrie(root, word);
 
 	char delWord[] = "amit";
-	cout << endl << "deleting " << delWord << endl;
-	deleteWord(delWord);
+	//cout << endl << "deleting " << delWord << endl;
+	//deleteWord(delWord);
 	printtrie(root, word);
-	//deleteTrie(root);
+	deleteTrie(root);
 	//printtrie(root, word);
 }
